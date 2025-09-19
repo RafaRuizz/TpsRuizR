@@ -1,0 +1,91 @@
+import random
+
+#Ejercicio 1
+
+for num in range(0,101):
+    print(num)
+
+#Ejercicio 2
+
+num = int(input("Ingrese un numero entero: "))
+digitos = len(str(num))
+print(f"El numero {num} tiene {digitos} digitos")
+
+#Ejercicio 3
+
+num = int(input("Ingrese un numero entero: "))
+num2 = int(input("Ingrese otro numero entero: "))
+suma = 0
+if num > num2:
+    num, num2 = num2, num
+for i in range(num+1, num2):
+    suma += i
+print(f"La suma de los numeros entre {num} y {num2} es: {suma}")
+
+#Ejercicio 4
+
+while num != 0:
+    num = int(input("Ingrese un numero entero: "))
+    suma += num
+print(f"La suma total es: {suma}")
+
+#Ejercicio 5
+
+intentos = 0
+num_aleatorio = random.randint(0, 10)
+num_usuario = int(input("Adivina el numero entre 0 y 9: "))
+while num_usuario != num_aleatorio:
+    intentos += 1
+    num_usuario = int(input("Intenta de nuevo: "))
+intentos += 1
+print(f"Felicidades! Adivinaste el numero {num_aleatorio} en {intentos} intentos.")
+
+#Ejercicio 6
+
+for num in range(100, -1, -1):
+    if num % 2 == 0:
+        print(num)
+    else:
+        continue
+
+#Ejercicio 7
+
+num = int(input("Ingrese un numero entero: "))
+suma = 0
+if num < 0:
+    num = abs(num)
+for i in range(0, num+1):
+    suma += i
+print(f"La suma de los numeros desde 0 hasta {num} es: {suma}")
+
+#Ejercicio 8 y 9
+
+pares = 0
+impares = 0
+positivos = 0
+negativos = 0
+suma = 0
+for i in range(100):
+    num = random.randint(-1000,1001)
+    if num % 2 == 0:
+        pares += 1
+    else: 
+        impares += 1
+    if num < 0:
+        negativos += 1
+    elif num > 0:
+        positivos += 1
+    suma += num
+promedio = suma / 100
+print(f"Promedio: {promedio}")
+print(f"Numeros pares: {pares}")
+print(f"Numeros impares: {impares}")
+print(f"Numeros positivos: {positivos}")
+print(f"Numeros negativos: {negativos}")
+
+#Ejercicio 10
+
+num = int(input("Ingrese un numero entero: "))
+inverso = str(num)[::-1]
+print(f"El inverso de {num} es {inverso}")
+
