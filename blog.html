@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog de Programación</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      color: #222;
+    }
+    header, footer { padding: 1rem 0; }
+    nav ul { list-style: none; padding: 0; display: flex; gap: 1.5rem; }
+    a { color: #1f4e8c; }
+    article { margin-bottom: 2rem; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #999; padding: 0.5rem; text-align: left; }
+    thead { background: #dce6f5; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Blog de Programación</h1>
+    <nav aria-label="Navegación principal del blog">
+      <ul>
+        <li><a href="#articulo-html">HTML semántico</a></li>
+        <li><a href="#articulo-accesibilidad">Accesibilidad</a></li>
+        <li><a href="#enlaces">Enlaces útiles</a></li>
+        <li><a href="#contactos">Contactos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main tabindex="0">
+
+    <article id="articulo-html">
+      <h2>Por qué importa el HTML semántico</h2>
+      <p>
+        Usar etiquetas que describen el contenido, y no solo su aspecto, hace que una página
+        sea más fácil de leer, de mantener y de entender tanto para las personas como para
+        los buscadores y los lectores de pantalla.
+      </p>
+      <p>
+        En lugar de armar todo con <code>&lt;div&gt;</code>, conviene elegir la etiqueta que
+        mejor representa cada parte de la página.
+      </p>
+      <ul>
+        <li><code>&lt;header&gt;</code>: encabezado de la página o de una sección.</li>
+        <li><code>&lt;main&gt;</code>: el contenido principal del documento.</li>
+        <li><code>&lt;article&gt;</code>: un bloque de contenido independiente.</li>
+        <li><code>&lt;aside&gt;</code>: contenido relacionado pero secundario.</li>
+        <li><code>&lt;footer&gt;</code>: pie de la página o de una sección.</li>
+      </ul>
+    </article>
+
+    <article id="articulo-accesibilidad">
+      <h2>Primeros pasos con accesibilidad web</h2>
+      <p>
+        Una web accesible puede ser usada por la mayor cantidad de personas posible, incluso
+        quienes navegan solo con el teclado o con un lector de pantalla.
+      </p>
+      <p>
+        Hay buenas prácticas simples que se pueden aplicar desde el principio y que mejoran
+        mucho la experiencia.
+      </p>
+      <ol>
+        <li>Usar una estructura de títulos ordenada (h1, h2, h3).</li>
+        <li>Agregar <code>aria-label</code> a los elementos que necesiten una descripción.</li>
+        <li>Asegurar que se pueda recorrer la página con el teclado usando <code>tabindex</code>.</li>
+        <li>Escribir textos de enlace que se entiendan por sí solos.</li>
+      </ol>
+    </article>
+
+  </main>
+
+  <aside id="enlaces" aria-label="Enlaces relacionados">
+    <h2>Enlaces relacionados</h2>
+    <ul>
+      <li><a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" rel="noopener noreferrer">Documentación de HTML en MDN</a></li>
+      <li><a href="https://developer.mozilla.org/es/docs/Learn/Accessibility" target="_blank" rel="noopener noreferrer">Guía de accesibilidad en MDN</a></li>
+      <li><a href="https://www.w3.org/WAI/" target="_blank" rel="noopener noreferrer">Iniciativa de Accesibilidad Web (W3C WAI)</a></li>
+    </ul>
+  </aside>
+
+  <footer>
+    <section id="contactos">
+      <h2>Tabla de contactos</h2>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Correo</th>
+            <th scope="col">Cargo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Lucía Fernández</td>
+            <td>lucia.fernandez@ejemplo.com</td>
+            <td>Editora</td>
+          </tr>
+          <tr>
+            <td>Martín Gómez</td>
+            <td>martin.gomez@ejemplo.com</td>
+            <td>Redactor</td>
+          </tr>
+          <tr>
+            <td>Carla Ruiz</td>
+            <td>carla.ruiz@ejemplo.com</td>
+            <td>Diseñadora web</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </footer>
+
+</body>
+</html>
